@@ -1,4 +1,62 @@
 .crystal {
-    width:150px;
-    height:auto;
+    width:200px;
+    height:170px;
+}
+
+nav {
+    font-family: 'Monoton', cursive;
+}
+
+body {
+    background-image: url("/unit-4-game/assets/images/background.jpg");
+    background-size: cover;
+    
+}
+
+.box1 {
+    background-color: lightsalmon;
+    margin-top:25px;
+    margin-bottom:25px;
+    padding:0px 15px 0px 15px;
+    line-height: 30px;
+    font-family: 'Merienda', cursive;
+}
+
+.box2 {
+    /* margin-left:170px;
+    margin-right:170px; */
+}
+
+.bigbox {
+    align-content: center;
+}
+
+
+.box3 {
+    /* margin-left:50px; */
+    margin-right:50px;
+    padding:20px;
+    font-family: 'Orbitron', sans-serif;
+    
+    background-color: antiquewhite;
+    font-size: 20px;
+}
+
+.box4 {
+    /* margin-left:50px; */
+    margin-right:50px;
+    padding:20px;
+    font-family: 'Orbitron', sans-serif;
+   
+    
+    background-color: antiquewhite;
+    font-size: 20px;
+}
+
+@media screen and (max-width:1213px){
+    .box2 {
+        margin-left:100px;
+        margin-right:0px;
+    }
+
 }
