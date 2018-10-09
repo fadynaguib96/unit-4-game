@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Merienda|Monoton|Orbitron" rel="stylesheet">
@@ -20,9 +21,9 @@
         <span id="naav" class="navbar-brand mx-auto h1"> Crystal Collector Game </span>
     </nav>
 
-    <div class= "bigbox" class="d-flex justify-content-xl-center" class="container">
+ 
 
-    <div class="container" >
+    <div class="container d-flex justify-content-xl-center" >
         <div class="row">
             <div class="box1" class="col col-xl-6">
                 <p>
@@ -40,7 +41,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container d-flex justify-content-xl-center">
         <div class="row">
             <div class="box2" class="col col-xl-12">
                 <p class="display"> </p>
@@ -48,7 +49,7 @@
         </div>
     </div>
 
-    <div class="container" class="d-flex justify-content-xl-center">
+    <div class="container d-flex justify-content-xl-center">
             <div class="row">
                 <div class="box3" class="col col-xl-3">
                     <p>Desired Score: <span class="comscore"></span></p>
@@ -63,96 +64,14 @@
             </div>  
     </div>
 
-</div>
+
 
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-    <script text="text/javascript">
-
-        var computerScore = "";
-        var userScore = 0
-        var wins = 0;
-        var losses = 0;
-        var stillPlaying = true;
-        var imgArr = ["assets/images/crystal1.jpg",
-            "assets/images/crystal2.jpg",
-            "assets/images/crystal3.jpg",
-            "assets/images/crystal4.jpg"
-        ]
-
-
-        function randomScore() {
-            computerScore = Math.floor(Math.random() * (102) + 19);
-
-        }
-
-
-
-
-
-        function valueAssign() {
-            for (var i = 0; i < imgArr.length; i++) {
-                var crystals = $("<img>");
-                crystals.addClass("crystal");
-                crystals.attr("src", imgArr[i]);
-                crystals.attr("value", (Math.floor(Math.random() * 12) + 1));
-                $(".display").append(crystals);
-
-            }
-
-        }
-
-
-        function startGame() {
-            userScore = 0
-            computerScore = "";
-
-            $(".currentscore").text(userScore)
-            $(".display").empty();
-
-            valueAssign()
-
-            randomScore()
-            $(".comscore").text(computerScore)
-
-
-            $(".crystal").on("click", function () {
-
-                if (userScore < computerScore) {
-                    stillPlaying = true
-                    var crysValue = ($(this).attr("value"));
-                    crysValue = parseInt(crysValue);
-                    userScore = userScore + crysValue
-                    $(".currentscore").text(userScore)
-                }
-
-                if (stillPlaying = true) {
-                    if (userScore === computerScore) {
-                        wins++
-                        $(".win").text(wins)
-                        $(".results").text("You win!!!")
-                        startGame()
-                    }
-
-                    else if (userScore > computerScore) {
-                        losses++
-                        $(".loss").text(losses)
-                        $(".results").text("You lose!!!")
-                        startGame()
-                    }
-
-                }
-
-            })
-
-
-        }
-
-        startGame()
-
+    <script text="text/javascript" src="assets/javascript/game.js">
 
 
     </script>

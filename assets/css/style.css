@@ -8,7 +8,7 @@ nav {
 }
 
 body {
-    background-image: url("/unit-4-game/assets/images/background.jpg");
+    background-image: url("/assets/images/background.jpg");
     background-size: cover;
     
 }
@@ -53,10 +53,70 @@ body {
     font-size: 20px;
 }
 
-@media screen and (max-width:1213px){
-    .box2 {
-        margin-left:100px;
-        margin-right:0px;
+@media screen and (max-width:1006px){
+    .crystal {
+        width:150px;
+        height:120px;
     }
 
+    .box2 {
+        margin-left:70px;
+    }
+
+    
+    .box3 {
+        margin-left:90px;
+    }
+
+    .box4 {
+        margin-left:70px;
+    }
+   
+}
+
+
+@media screen and (max-width:783px){
+    .crystal {
+        width:120px;
+        height:90px;
+    }
+
+    .box2 {
+        margin-left:120px;
+    }
+
+    
+    .box3 {
+        margin-left:120px;
+    }
+
+    .box4 {
+        margin-left:60px;
+    }
+   
+}
+
+
+@media screen and (max-width:400px){
+    .crystal {
+        width:120px;
+        height:90px;
+    }
+
+    .box2 {
+        margin-left:70px;
+    }
+
+    
+    .box3 {
+        margin-left:21px;
+        margin-right:10px;
+        padding:1px;
+    }
+
+    .box4 {
+        margin-left:0px;
+        padding:1px;
+    }
+   
 }
